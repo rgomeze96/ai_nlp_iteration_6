@@ -18,7 +18,7 @@ def nlp_processing(searches_df):
     
     # count the full search text
     searches_df_counts = searches_df.value_counts()
-    
+    print("all searches counted:", searches_df_counts)
     # split the searches into single words
     split_searches = (searches_df.assign(searches=searches_df['search'].str.split()).explode('searches'))
     
